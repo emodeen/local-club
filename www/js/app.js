@@ -34,7 +34,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: "/search",
     views: {
       'menuContent': {
-        templateUrl: "templates/add.html"
+          templateUrl: "templates/add.html"
+//         , controller: 'AddCtrl'
       }
     }
   })
@@ -47,7 +48,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       }
     }
   })
-    .state('app.playlists', {
+
+  .state('app.playlists', {
       url: "/playlists",
       views: {
         'menuContent': {
