@@ -34,8 +34,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     url: "/search",
     views: {
       'menuContent': {
-          templateUrl: "templates/add.html"
-//         , controller: 'AddCtrl'
+          templateUrl: "templates/add.html",
+          controller: 'AddCtrl'
       }
     }
   })

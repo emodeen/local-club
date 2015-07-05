@@ -53,7 +53,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('AddCtrl', function($scope, $stateParams) {
-
+    console.log('test');
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
