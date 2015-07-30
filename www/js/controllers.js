@@ -50,6 +50,11 @@ angular.module('starter.controllers', [])
     { title: 'Rap', id: 5 },
     { title: 'Cowbell', id: 6 }
   ];
+
+  $scope.newTask = function() {
+    $scope.playlists.push({ title: 'New task', id: 7 });
+  };
+  
 })
 
 .controller('AddCtrl', function($scope, $stateParams) {
