@@ -25,7 +25,7 @@ angular.module('starter.controllers', [])
   };
 
   // Open the login modal
-  $scope.login = function() {
+  $scope.rename = function() {
     $scope.modal.show();
   };
 
