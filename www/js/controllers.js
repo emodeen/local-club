@@ -12,26 +12,31 @@ angular.module('starter.controllers', [])
   // Form data for the login modal
   $scope.loginData = {};
 
-  // Create the login modal that we will use later
+  // Create the Edit Venue modal that we will use later
   $ionicModal.fromTemplateUrl('templates/login.html', {
     scope: $scope
   }).then(function(modal) {
     $scope.modal = modal;
   });
 
-  // Triggered in the login modal to close it
+  // Triggered in the Edit Venue modal to close it
   $scope.closeLogin = function() {
     $scope.modal.hide();
   };
 
-  // Open the login modal
-  $scope.rename = function() {
-    $scope.modal.show();
+  // Open the Edit Venue modal
+  $scope.rename = function(playlist) {
+      $scope.modal.show();
+
+      // Pass in $index so we know which one to rename
+      //console.log(playlist.title);
   };
 
-  // Perform the login action when the user submits the login form
+  // Perform the Save action when the user submits the Edit Venue form
   $scope.doLogin = function() {
     console.log('Doing login', $scope.loginData);
+
+    //$scope.playLists[n].push  
 
     // Simulate a login delay. Remove this and replace with your login
     // code if using a login system
@@ -54,7 +59,15 @@ angular.module('starter.controllers', [])
   $scope.newTask = function() {
     $scope.playlists.push({ title: 'New task', id: 7 });
   };
-  
+
+  // Open the Edit Venue modal
+  $scope.edit = function() {
+     $scope.modal.show();
+
+     console.log('edit function called ' + $scope.playlists[2].title);
+  };
+
+    
 })
 
 .controller('AddCtrl', function($scope, $stateParams) {
@@ -62,6 +75,7 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, $stateParams) {
+
 
 });
 
