@@ -61,10 +61,10 @@ angular.module('starter.controllers', [])
   };
 
   // Open the Edit Venue modal
-  $scope.edit = function() {
+  $scope.edit = function(playlist) {
      $scope.modal.show();
 
-     console.log('edit function called ' + $scope.playlists[2].title);
+     console.log('edit function called ' + playlist.title);
   };
 
     
