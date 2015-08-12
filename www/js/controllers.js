@@ -26,27 +26,12 @@ angular.module('starter.controllers', [])
 
   // Open the Edit Venue modal
   $scope.rename = function(playlist) {
+
       $scope.modal.show();
 
-      // Pass in $index so we know which one to rename
-      //console.log(playlist.title);
+      console.log('Rename to ' + playlist.title);
   };
 
-  // Perform the Save action when the user submits the Edit Venue form
-  $scope.doLogin = function() {
-    console.log('Doing login', $scope.loginData);
-
-    //$scope.playLists[n].push  
-
-    // Simulate a login delay. Remove this and replace with your login
-    // code if using a login system
-    $timeout(function() {
-      $scope.closeLogin();
-    }, 1000);
-  };
-})
-
-.controller('PlaylistsCtrl', function($scope) {
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
@@ -60,12 +45,30 @@ angular.module('starter.controllers', [])
     $scope.playlists.push({ title: 'New task', id: 7 });
   };
 
-  // Open the Edit Venue modal
+  // Edit a venue
   $scope.edit = function(playlist) {
      $scope.modal.show();
 
-     console.log('edit function called ' + playlist.title);
+     console.log('edit function called ' + playlist.title + $scope.loginData.username);
   };
+    
+  // Called when the Submit button is clicked
+  $scope.doLogin = function() {
+      console.log('Venue name is ', $scope.loginData.username);
+
+      console.log('Rename to ' + $scope.loginData.username);
+
+      //$scope.playlists[
+
+    // Simulate a login delay. Remove this and replace with your login
+    // code if using a login system
+    $timeout(function() {
+      $scope.closeLogin();
+    }, 1000);
+  };
+})
+
+.controller('PlaylistsCtrl', function($scope) {
 
     
 })
