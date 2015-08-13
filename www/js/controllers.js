@@ -24,14 +24,6 @@ angular.module('starter.controllers', [])
     $scope.modal.hide();
   };
 
-  // Open the Edit Venue modal
-  $scope.rename = function(playlist) {
-
-      $scope.modal.show();
-
-      console.log('Rename to ' + playlist.title);
-  };
-
   $scope.playlists = [
     { title: 'Reggae', id: 1 },
     { title: 'Chill', id: 2 },
@@ -58,7 +50,9 @@ angular.module('starter.controllers', [])
 
       console.log('Rename to ' + $scope.loginData.username);
 
-      //$scope.playlists[
+      console.log('Playlist is ' + $scope.playlists[1].title);
+
+      //console.log('Playlist is ' + playlist.title);
 
     // Simulate a login delay. Remove this and replace with your login
     // code if using a login system
