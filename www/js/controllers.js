@@ -2,13 +2,6 @@ angular.module('starter.controllers', [])
 
 .controller('AppCtrl', function($scope, $ionicModal, $timeout) {
   
-  // With the new view caching in Ionic, Controllers are only called
-  // when they are recreated or on app start, instead of every page change.
-  // To listen for when this page is active (for example, to refresh data),
-  // listen for the $ionicView.enter event:
-  //$scope.$on('$ionicView.enter', function(e) {
-  //});
-  
   // Form data for the login modal
   $scope.loginData = {};
 
@@ -40,20 +33,10 @@ angular.module('starter.controllers', [])
   // Edit a venue
   $scope.edit = function(playlist) {
      $scope.modal.show();
-
-     console.log('edit function called ' + playlist.title + $scope.loginData.username);
   };
     
   // Called when the Submit button is clicked
   $scope.doLogin = function() {
-      console.log('Venue name is ', $scope.loginData.username);
-
-      console.log('Rename to ' + $scope.loginData.username);
-
-      console.log('Playlist is ' + $scope.playlists[1].title);
-
-      //console.log('Playlist is ' + playlist.title);
-
     // Simulate a login delay. Remove this and replace with your login
     // code if using a login system
     $timeout(function() {
@@ -64,15 +47,6 @@ angular.module('starter.controllers', [])
 
 .controller('PlaylistsCtrl', function($scope) {
 
-    
 })
-
-.controller('AddCtrl', function($scope, $stateParams) {
-    console.log('test');
-})
-
-.controller('PlaylistCtrl', function($scope, $stateParams) {
-
-
-});
+;
 
