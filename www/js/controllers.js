@@ -18,16 +18,13 @@ angular.module('starter.controllers', [])
   };
 
   $scope.playlists = [
-    { title: 'Reggae', id: 1 },
-    { title: 'Chill', id: 2 },
-    { title: 'Dubstep', id: 3 },
-    { title: 'Indie', id: 4 },
-    { title: 'Rap', id: 5 },
-    { title: 'Cowbell', id: 6 }
+    { title: 'Yard House', id: 1 },
+    { title: 'Kings', id: 2 },
+    { title: 'Dave & Busters', id: 3 },
   ];
 
   $scope.newTask = function() {
-    $scope.playlists.push({ title: 'New task', id: 7 });
+    $scope.playlists.push({ title: 'New venue', id: 7 });
   };
 
   // Edit a venue
