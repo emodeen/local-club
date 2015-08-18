@@ -4,10 +4,15 @@
     <ion-list>
       <ion-item ng-repeat="playlist in playlists">
 	<div>
-        <span id="spanStage">{{playlist.title}}</span>
+        <span id="spanStage">Venue: {{playlist.title}}</span>
         <button class="button button-royal" ng-click="edit(playlist)">Edit</button>
 	<input ng-model='playlist.title'>
 	</div>
+	<div>
+        <span id="spanStage2">City: {{playlist.city}}</span>
+	<input ng-model='playlist.city'>
+	</div>
+	
       </ion-item>
     </ion-list>
   </ion-content>
