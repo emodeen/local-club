@@ -31,6 +31,12 @@ angular.module('starter.controllers', [])
   $scope.edit = function(playlist) {
      $scope.modal.show();
   };
+
+  // Edit a venue
+  $scope.remove = function(playlist) {
+      var index = $scope.playlists.indexOf(playlist);
+      $scope.playlists.splice(index, 1);
+  };    
     
   // Called when the Submit button is clicked
   $scope.doLogin = function() {
