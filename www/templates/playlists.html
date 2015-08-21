@@ -1,12 +1,13 @@
 <ion-view view-title="Venues">
   <ion-content>
-    <button class="button button-balanced" ng-click="newTask()">Add</button>
+    <button class="button button-balanced" ng-click="newTask()">Add venue</button>
     <ion-list>
-      <ion-item ng-repeat="playlist in playlists">
+      <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}">
 	<div>
         <span id="spanStage">Venue: {{playlist.title}}</span>
         <button class="button button-royal" ng-click="edit(playlist)">Edit</button>
-        <button class="button button-energized" ng-click="remove(playlist)">Delete</button>	
+        <button class="button button-energized" ng-click="remove(playlist)">Delete</button>
+        <button class="button button-calm">Events</button>		
 	<input ng-model='playlist.title'>
 	</div>
 	<div>
