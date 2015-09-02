@@ -70,4 +70,19 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   });
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/app/playlists');
+})
+
+.factory('TodosService', function() {
+  var todos = [
+      {title: "Yard House", done: true},
+      {title: "Kings", done: false},
+      {title: "Joshua Tree", done: false}
+   ]
+
+  return {
+    todos: todos,
+    getTodo: function(index) {
+      return todos[index]
+    }
+  }
 });
