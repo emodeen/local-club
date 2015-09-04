@@ -72,17 +72,17 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   $urlRouterProvider.otherwise('/app/playlists');
 })
 
-.factory('TodosService', function() {
-  var todos = [
+.factory('PlaylistsService', function() {
+  var playlists = [
       {title: "Yard House", done: true},
       {title: "Kings", done: false},
       {title: "Joshua Tree", done: false}
    ]
 
   return {
-    todos: todos,
-    getTodo: function(index) {
-      return todos[index]
+    playlists: playlists,
+    getPlaylist: function(index) {
+      return playlists[index]
     }
   }
 });

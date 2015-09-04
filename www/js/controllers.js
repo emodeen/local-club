@@ -1,6 +1,6 @@
 angular.module('starter.controllers', [])
 
-    .controller('AppCtrl', function($scope, $ionicModal, $timeout, TodosService) {
+.controller('AppCtrl', function($scope, $ionicModal, $timeout, PlaylistsService) {
   
   // Form data for the login modal
   $scope.loginData = {};
@@ -17,13 +17,7 @@ angular.module('starter.controllers', [])
     $scope.modal.hide();
   };
 
-  $scope.playlists = TodosService.todos
-
-  //$scope.playlists = [
-  //  { title: 'Yard House', id: 1 },
-  //  { title: 'Kings', id: 2 },
-  //  { title: 'Dave & Busters', id: 3 },
-  //];
+  $scope.playlists = PlaylistsService.playlists;
 
   $scope.newTask = function() {
     $scope.playlists.push({ title: 'New venue', id: 7 });
