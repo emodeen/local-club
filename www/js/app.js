@@ -48,6 +48,16 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   })
 
+  .state('playlists', {
+      abstract: true,
+      url: "/playlists",
+      views: {
+	  playlists: {
+              template: '<ion-nav-view></ion-nav-view>'
+	  }
+      }
+  })
+
   .state('app.playlists', {
       url: "/playlists",
       views: {
@@ -56,7 +66,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
           controller: 'AppCtrl'
         }
       }
-    })
+    })    
 
   .state('app.single', {
     url: "/playlists/:playlistId",
