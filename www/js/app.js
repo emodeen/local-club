@@ -24,8 +24,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   $stateProvider
 
   .state('home', {
-    url: '/',
-    templateUrl: 'templates/playlists.html'
+      url: '/',
+      views: {
+	  home: {
+              templateUrl: 'templates/playlists.html'
+	  }
+      }
   })
 
     
