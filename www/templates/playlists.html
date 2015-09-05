@@ -2,7 +2,7 @@
   <ion-content>
     <button class="button button-balanced" ng-click="newTask()">Add venue</button>
     <ion-list>
-      <ion-item ng-repeat="playlist in playlists" ui-sref="app.single({playlist: $index})">
+      <ion-item ng-repeat="playlist in playlists" ui-sref="app.single">
 	<div>
         <span id="spanStage">Venue: {{playlist.title}}</span>
         <button class="button button-royal" ng-click="edit(playlist)">Edit</button>
