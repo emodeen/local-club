@@ -25,7 +25,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
   .state('home', {
     url: '/',
-    template: '<p>Hello, world!</p>'
+    templateUrl: 'templates/playlists.html'
   })
 
     
