@@ -23,6 +23,12 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
+  .state('home', {
+    url: '/',
+    template: '<p>Hello, world!</p>'
+  })
+
+    
   .state('app', {
     url: "/app",
     templateUrl: "templates/menu.html",
@@ -59,7 +65,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     }
   });
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/app/playlists');
+  $urlRouterProvider.otherwise('/');
 })
 
 .factory('PlaylistsService', function() {
