@@ -24,13 +24,19 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   $stateProvider
 
   .state('home', {
+      abstract: true,	    
       url: '/',
       views: {
 	  home: {
-              templateUrl: 'templates/playlists.html',
-	      controller: 'AppCtrl'
+	      template: '<ion-nav-view></ion-nav-view>'
 	  }
       }
+  })
+    
+  .state('home.index', {
+      url: '',
+      templateUrl: 'templates/playlists.html',
+      controller: 'AppCtrl'
   })
 
     
