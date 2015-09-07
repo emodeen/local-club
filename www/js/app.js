@@ -38,6 +38,13 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       templateUrl: 'templates/playlists.html',
       controller: 'AppCtrl'
   })    
+
+  .state('home.detail', {
+    url: '',
+    templateUrl: 'templates/playlist.html',
+    controller: 'AppCtrl'
+  })
+
     
   .state('app', {
     url: "/app",
