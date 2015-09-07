@@ -27,7 +27,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
       url: '/',
       views: {
 	  home: {
-              templateUrl: 'templates/playlists.html'
+              templateUrl: 'templates/playlists.html',
+	      controller: 'AppCtrl'
 	  }
       }
   })
