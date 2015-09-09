@@ -42,7 +42,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   .state('home.detail', {
     url: '',
     templateUrl: 'templates/playlist.html',
-    controller: 'AppCtrl',
+    controller: 'PlaylistCtrl',
     resolve: {
       playlist: function($stateParams, PlaylistsService) {
         return PlaylistsService.getPlaylist($stateParams.playlist)
