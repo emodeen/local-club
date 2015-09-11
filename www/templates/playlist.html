@@ -2,7 +2,8 @@
   <ion-content>
     <button class="button button-royal" ng-click="edit()">Edit</button>
     <div class="item">
-      <p>This is a paragraph. {{playlist.title}}</p>
+      <p>{{playlist.title}}</p>
+      <input ng-model='playlist.title'>
     </div>
   </ion-content>
 </ion-view>
