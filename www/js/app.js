@@ -40,12 +40,14 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   })    
 
   .state('home.detail', {
-    url: '',
+    url: '/:num',
     templateUrl: 'templates/playlist.html',
     controller: 'PlaylistCtrl',
     resolve: {
       playlist: function($stateParams, PlaylistsService) {
-        return PlaylistsService.getPlaylist($stateParams.playlist)
+	  // Pass the playlist index into getPlaylist
+	  console.log("home.detail " + $stateParams.num); //undefined
+          return PlaylistsService.getPlaylist($stateParams.num);
       }
     }      
   })
@@ -99,7 +101,8 @@ angular.module('starter', ['ionic', 'starter.controllers'])
 
   return {
     playlists: playlists,
-    getPlaylist: function(index) {
+      getPlaylist: function(index) {
+	  console.log("factory " + index);
       return playlists[index]
     }
   }
