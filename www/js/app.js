@@ -46,7 +46,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     resolve: {
       playlist: function($stateParams, PlaylistsService) {
 	  // Pass the playlist index into getPlaylist
-	  console.log("home.detail " + $stateParams.num); //undefined
           return PlaylistsService.getPlaylist($stateParams.num);
       }
     }      
@@ -102,8 +101,7 @@ angular.module('starter', ['ionic', 'starter.controllers'])
   return {
     playlists: playlists,
       getPlaylist: function(index) {
-	  console.log("factory " + index);
-      return playlists[index]
+        return playlists[index]
     }
   }
 });

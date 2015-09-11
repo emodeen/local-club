@@ -6,16 +6,11 @@
       <ion-item ng-repeat="playlist in playlists" class="item item-icon-right" ui-sref="home.detail({num: $index})">
 	<div>
         <span id="spanStage">Venue: {{playlist.title}}</span>
-        <button class="button button-royal" ng-click="edit(playlist)">Edit</button>
         <button class="button button-energized" ng-click="remove(playlist)">Delete</button>
         <button class="button button-calm">Events</button>		
-
 	</div>
 	
-	<div>
-        <span id="spanStage2">City: {{playlist.city}}</span>
-	<input ng-model='playlist.city'>
-	</div>
+
 	
       </ion-item>
     </ion-list>
