@@ -6,13 +6,13 @@
   <ion-content>
     <button class="button button-royal" ng-click="edit()">Edit</button>
     <div class="item">
-      <p>{{playlist.title}}</p>
+      <p>Venue: {{playlist.title}}</p>
       <input ng-model='playlist.title' ng-show='editState.show'>
     </div>
 
-    <div>
-      <span id="spanStage2">City: {{playlist.city}}</span>
-      <input ng-model='playlist.city'>
+    <div class="item">
+      <p>City: {{playlist.city}}</p>
+      <input ng-model='playlist.city' ng-show='editState.show'>
     </div>
   </ion-content>
 </ion-view>
