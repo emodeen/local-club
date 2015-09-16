@@ -23,10 +23,7 @@ angular.module('starter.controllers', [])
     $scope.playlists.push({ title: 'New venue', id: 7 });
   };
 
-  // Edit a venue
-  $scope.edit = function(playlist) {
-     $scope.modal.show();
-  };
+
 
   // Edit a venue
   $scope.remove = function(playlist) {
@@ -45,7 +42,14 @@ angular.module('starter.controllers', [])
 })
 
 .controller('PlaylistCtrl', function($scope, playlist) {
-    $scope.playlist = playlist;
+  $scope.playlist = playlist;
+
+  $scope.editState = {show: false};
+
+  // Edit a venue
+  $scope.edit = function() {
+    $scope.editState.show = !$scope.editState.show;
+  };    
 })
 ;
 

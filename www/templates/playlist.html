@@ -7,7 +7,7 @@
     <button class="button button-royal" ng-click="edit()">Edit</button>
     <div class="item">
       <p>{{playlist.title}}</p>
-      <input ng-model='playlist.title'>
+      <input ng-model='playlist.title' ng-show='editState.show'>
     </div>
 
     <div>
